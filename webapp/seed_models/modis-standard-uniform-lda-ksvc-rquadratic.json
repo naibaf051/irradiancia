@@ -1,0 +1,72 @@
+{
+ "id": "modis-standard-uniform-lda-ksvc-rquadratic",
+ "name": "modis \u00b7 Standard | uniform | LDA | KSVC-rquadratic",
+ "dataset": "modis",
+ "scaler": "StandardScaler",
+ "discretizer": "uniform",
+ "reducer": "LDA",
+ "model": "KSVC",
+ "kernel": "rquadratic",
+ "params": {
+  "C": 113.38919272254311,
+  "coef0": 300.72140967174505,
+  "kernel": "rquadratic"
+ },
+ "features": [
+  "band1",
+  "band2",
+  "band3",
+  "band4",
+  "band5",
+  "band6",
+  "band7"
+ ],
+ "cv_f1": 0.8448626937737712,
+ "metrics": {
+  "accuracy": 0.8539325842696629,
+  "f1_macro": 0.7264957264957265,
+  "auc_ovr": 0.8584182055196549,
+  "mcc": 0.7411437464542848
+ },
+ "confusion_matrix": [
+  [
+   50,
+   4,
+   0
+  ],
+  [
+   1,
+   4,
+   7
+  ],
+  [
+   0,
+   1,
+   22
+  ]
+ ],
+ "class_names": [
+  "baja",
+  "media",
+  "alta"
+ ],
+ "class_ranges": [
+  [
+   188.5,
+   207.4
+  ],
+  [
+   208.9,
+   228.0
+  ],
+  [
+   228.4,
+   248.1
+  ]
+ ],
+ "class_counts_train": [
+  215,
+  49,
+  92
+ ]
+}

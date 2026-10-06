@@ -1,0 +1,72 @@
+{
+ "id": "modis-minmax-uniform-lda-kridge-rbf",
+ "name": "modis \u00b7 MinMax | uniform | LDA | KRidge-rbf",
+ "dataset": "modis",
+ "scaler": "MinMaxScaler",
+ "discretizer": "uniform",
+ "reducer": "LDA",
+ "model": "KRidge",
+ "kernel": "rbf",
+ "params": {
+  "alpha": 0.021350756948761884,
+  "gamma": 0.035121949313492565,
+  "kernel": "rbf"
+ },
+ "features": [
+  "band1",
+  "band2",
+  "band3",
+  "band4",
+  "band5",
+  "band6",
+  "band7"
+ ],
+ "cv_f1": 0.8406251074264489,
+ "metrics": {
+  "accuracy": 0.8426966292134831,
+  "f1_macro": 0.694189877208745,
+  "auc_ovr": 0.9087388725069885,
+  "mcc": 0.7216878364870323
+ },
+ "confusion_matrix": [
+  [
+   50,
+   4,
+   0
+  ],
+  [
+   1,
+   3,
+   8
+  ],
+  [
+   0,
+   1,
+   22
+  ]
+ ],
+ "class_names": [
+  "baja",
+  "media",
+  "alta"
+ ],
+ "class_ranges": [
+  [
+   188.5,
+   207.4
+  ],
+  [
+   208.9,
+   228.0
+  ],
+  [
+   228.4,
+   248.1
+  ]
+ ],
+ "class_counts_train": [
+  215,
+  49,
+  92
+ ]
+}

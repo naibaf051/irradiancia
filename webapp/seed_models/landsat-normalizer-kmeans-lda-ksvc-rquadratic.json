@@ -1,0 +1,72 @@
+{
+ "id": "landsat-normalizer-kmeans-lda-ksvc-rquadratic",
+ "name": "landsat \u00b7 Normalizer | kmeans | LDA | KSVC-rquadratic",
+ "dataset": "landsat",
+ "scaler": "Normalizer",
+ "discretizer": "kmeans",
+ "reducer": "LDA",
+ "model": "KSVC",
+ "kernel": "rquadratic",
+ "params": {
+  "C": 6625.09478745586,
+  "coef0": 63.95976350042716,
+  "kernel": "rquadratic"
+ },
+ "features": [
+  "band1",
+  "band2",
+  "band3",
+  "band4",
+  "band5",
+  "band6",
+  "band7"
+ ],
+ "cv_f1": 0.8075635401459434,
+ "metrics": {
+  "accuracy": 0.8160919540229885,
+  "f1_macro": 0.6830941325453779,
+  "auc_ovr": 0.856802992329308,
+  "mcc": 0.6694694102729366
+ },
+ "confusion_matrix": [
+  [
+   49,
+   3,
+   0
+  ],
+  [
+   1,
+   4,
+   6
+  ],
+  [
+   1,
+   5,
+   18
+  ]
+ ],
+ "class_names": [
+  "baja",
+  "media",
+  "alta"
+ ],
+ "class_ranges": [
+  [
+   188.5,
+   207.4
+  ],
+  [
+   208.0,
+   226.5
+  ],
+  [
+   227.0,
+   247.3
+  ]
+ ],
+ "class_counts_train": [
+  212,
+  44,
+  91
+ ]
+}

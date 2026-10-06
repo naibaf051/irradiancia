@@ -1,0 +1,76 @@
+{
+ "id": "landsat-minmax-hierarchical-lda-kann-radial-basic",
+ "name": "landsat \u00b7 MinMax | hierarchical | LDA | KANN-radial_basic",
+ "dataset": "landsat",
+ "scaler": "MinMaxScaler",
+ "discretizer": "hierarchical",
+ "reducer": "LDA",
+ "model": "KANN",
+ "kernel": "radial_basic",
+ "params": {
+  "alpha": 0.015993293213860945,
+  "degree": 4,
+  "gamma": 0.008443584432477823,
+  "hidden_layer_sizes": [
+   50
+  ],
+  "kernel": "radial_basic"
+ },
+ "features": [
+  "band1",
+  "band2",
+  "band3",
+  "band4",
+  "band5",
+  "band6",
+  "band7"
+ ],
+ "cv_f1": 0.7670512455460843,
+ "metrics": {
+  "accuracy": 0.8390804597701149,
+  "f1_macro": 0.7573319926261103,
+  "auc_ovr": 0.9488886598861024,
+  "mcc": 0.713546566321731
+ },
+ "confusion_matrix": [
+  [
+   50,
+   2,
+   0
+  ],
+  [
+   2,
+   10,
+   5
+  ],
+  [
+   0,
+   5,
+   13
+  ]
+ ],
+ "class_names": [
+  "baja",
+  "media",
+  "alta"
+ ],
+ "class_ranges": [
+  [
+   188.5,
+   208.0
+  ],
+  [
+   208.9,
+   230.5
+  ],
+  [
+   231.6,
+   247.3
+  ]
+ ],
+ "class_counts_train": [
+  213,
+  63,
+  71
+ ]
+}

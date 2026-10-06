@@ -1,0 +1,74 @@
+{
+ "id": "landsat-minmax-dbscan-pca-ksvc-radial-basic",
+ "name": "landsat \u00b7 MinMax | dbscan | PCA | KSVC-radial_basic",
+ "dataset": "landsat",
+ "scaler": "MinMaxScaler",
+ "discretizer": "dbscan",
+ "reducer": "PCA",
+ "model": "KSVC",
+ "kernel": "radial_basic",
+ "params": {
+  "C": 2.075496247003056,
+  "degree": 4,
+  "gamma": 0.13367246313467795,
+  "kernel": "radial_basic",
+  "red_n_components": 5
+ },
+ "features": [
+  "band1",
+  "band2",
+  "band3",
+  "band4",
+  "band5",
+  "band6",
+  "band7"
+ ],
+ "cv_f1": 0.8395284562886111,
+ "metrics": {
+  "accuracy": 0.8620689655172413,
+  "f1_macro": 0.7675202156334232,
+  "auc_ovr": 0.8602344443969652,
+  "mcc": 0.7502518996217189
+ },
+ "confusion_matrix": [
+  [
+   52,
+   2,
+   0
+  ],
+  [
+   0,
+   8,
+   5
+  ],
+  [
+   0,
+   5,
+   15
+  ]
+ ],
+ "class_names": [
+  "baja",
+  "media",
+  "alta"
+ ],
+ "class_ranges": [
+  [
+   188.5,
+   214.0
+  ],
+  [
+   215.0,
+   230.2
+  ],
+  [
+   230.5,
+   247.3
+  ]
+ ],
+ "class_counts_train": [
+  225,
+  50,
+  72
+ ]
+}

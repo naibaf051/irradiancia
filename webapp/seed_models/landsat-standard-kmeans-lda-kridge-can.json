@@ -1,0 +1,72 @@
+{
+ "id": "landsat-standard-kmeans-lda-kridge-can",
+ "name": "landsat \u00b7 Standard | kmeans | LDA | KRidge-can",
+ "dataset": "landsat",
+ "scaler": "StandardScaler",
+ "discretizer": "kmeans",
+ "reducer": "LDA",
+ "model": "KRidge",
+ "kernel": "can",
+ "params": {
+  "alpha": 0.006319606374219871,
+  "gamma": 0.03101643079200348,
+  "kernel": "can"
+ },
+ "features": [
+  "band1",
+  "band2",
+  "band3",
+  "band4",
+  "band5",
+  "band6",
+  "band7"
+ ],
+ "cv_f1": 0.8045328505172616,
+ "metrics": {
+  "accuracy": 0.8045977011494253,
+  "f1_macro": 0.6023020583572448,
+  "auc_ovr": 0.9120222207941505,
+  "mcc": 0.6462463593752449
+ },
+ "confusion_matrix": [
+  [
+   50,
+   2,
+   0
+  ],
+  [
+   1,
+   1,
+   9
+  ],
+  [
+   0,
+   5,
+   19
+  ]
+ ],
+ "class_names": [
+  "baja",
+  "media",
+  "alta"
+ ],
+ "class_ranges": [
+  [
+   188.5,
+   207.4
+  ],
+  [
+   208.0,
+   226.5
+  ],
+  [
+   227.0,
+   247.3
+  ]
+ ],
+ "class_counts_train": [
+  212,
+  44,
+  91
+ ]
+}

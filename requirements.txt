@@ -1,0 +1,16 @@
+# Aplicacion web + notebook (versiones con las que se entrenaron y probaron los modelos).
+# IMPORTANTE: scikit-learn debe ser la misma version con la que se guardaron los .joblib.
+flask>=3.0
+waitress>=3.0
+scikit-learn==1.9.0
+numpy>=2.0
+pandas>=2.2
+scipy>=1.11
+joblib>=1.4
+pyproj>=3.6
+# solo para ejecutar el notebook
+matplotlib>=3.8
+seaborn>=0.13
+jupyter
+nbconvert
+ipykernel

@@ -1,0 +1,75 @@
+{
+ "id": "modis-normalizer-hierarchical-lda-kann-can",
+ "name": "modis \u00b7 Normalizer | hierarchical | LDA | KANN-can",
+ "dataset": "modis",
+ "scaler": "Normalizer",
+ "discretizer": "hierarchical",
+ "reducer": "LDA",
+ "model": "KANN",
+ "kernel": "can",
+ "params": {
+  "alpha": 0.000661943833642141,
+  "gamma": 64.02484261308297,
+  "hidden_layer_sizes": [
+   100
+  ],
+  "kernel": "can"
+ },
+ "features": [
+  "band1",
+  "band2",
+  "band3",
+  "band4",
+  "band5",
+  "band6",
+  "band7"
+ ],
+ "cv_f1": 0.8000610517724301,
+ "metrics": {
+  "accuracy": 0.7752808988764045,
+  "f1_macro": 0.6662723329389996,
+  "auc_ovr": 0.9226919024002779,
+  "mcc": 0.6032409672796909
+ },
+ "confusion_matrix": [
+  [
+   50,
+   1,
+   0
+  ],
+  [
+   6,
+   7,
+   7
+  ],
+  [
+   1,
+   5,
+   12
+  ]
+ ],
+ "class_names": [
+  "baja",
+  "media",
+  "alta"
+ ],
+ "class_ranges": [
+  [
+   188.5,
+   204.3
+  ],
+  [
+   205.5,
+   231.1
+  ],
+  [
+   231.6,
+   248.1
+  ]
+ ],
+ "class_counts_train": [
+  210,
+  72,
+  74
+ ]
+}

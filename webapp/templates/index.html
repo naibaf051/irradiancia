@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Irradiancia – Modelos Kernel</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+  <h1>Zonas de irradiancia · Nariño</h1>
+  <p>Clasificación con modelos kernel (KSVC · KANN · KRidge) sobre imágenes Landsat y MODIS</p>
+  <nav>
+    <button class="tab active" data-tab="compare">Comparar modelos</button>
+    <button class="tab" data-tab="models">Modelos almacenados</button>
+  </nav>
+</header>
+
+<main>
+<!-- ======================= COMPARAR ======================= -->
+<section id="tab-compare" class="panel">
+  <div class="selectors">
+    <label>Modelo A <select id="selA"></select></label>
+    <label>Modelo B <select id="selB"></select></label>
+    <label>Capa del mapa
+      <select id="layer">
+        <option value="pred">Clase predicha</option>
+        <option value="real">Clase real</option>
+        <option value="err">Aciertos / errores</option>
+      </select>
+    </label>
+  </div>
+  <p class="hint">Pica sobre cualquiera de los mapas para ver la clase de ese punto según ambos modelos (los mapas están sincronizados).</p>
+
+  <div class="maps">
+    <div class="mapbox"><h2 id="titleA">Modelo A</h2><div id="mapA" class="map"></div><div id="legendA" class="legend"></div></div>
+    <div class="mapbox"><h2 id="titleB">Modelo B</h2><div id="mapB" class="map"></div><div id="legendB" class="legend"></div></div>
+  </div>
+
+  <div id="clickResult" class="card" hidden></div>
+
+  <h2>Métricas de calidad (conjunto de prueba)</h2>
+  <div id="metrics" class="card"></div>
+  <div class="cms">
+    <div class="card"><h3 id="cmTitleA"></h3><div id="cmA"></div></div>
+    <div class="card"><h3 id="cmTitleB"></h3><div id="cmB"></div></div>
+  </div>
+  <div class="card" id="params"></div>
+  <p class="hint">Los mapas clasifican todos los píxeles del dataset (entrenamiento y prueba); las métricas se calculan solo con el 20 % de prueba, que el modelo no vio.</p>
+</section>
+
+<!-- ======================= MODELOS ======================= -->
+<section id="tab-models" class="panel" hidden>
+  <h2>Modelos almacenados</h2>
+  <div class="card"><table id="modelTable"></table></div>
+  <h2>Subir un modelo</h2>
+  <div class="card">
+    <p>Archivo <code>.joblib</code> generado con <code>kernelml.registry.save_model_bundle(...)</code> (ver README).
+       <strong>Solo sube archivos de confianza</strong>: un .joblib es un pickle y puede ejecutar código al cargarse.</p>
+    <form id="uploadForm"><input type="file" id="file" accept=".joblib" required> <button type="submit">Subir</button></form>
+    <p id="uploadMsg" class="hint"></p>
+  </div>
+</section>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
